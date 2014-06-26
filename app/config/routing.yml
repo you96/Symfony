@@ -1,0 +1,4 @@
+tao_blog:
+    resource: "@TaoBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
