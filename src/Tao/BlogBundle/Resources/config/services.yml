@@ -1,0 +1,7 @@
+parameters:
+#    tao_blog.example.class: Tao\BlogBundle\Example
+
+services:
+#    tao_blog.example:
+#        class: %tao_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
