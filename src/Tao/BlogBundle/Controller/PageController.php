@@ -16,7 +16,13 @@ use Tao\BlogBundle\Form\EnquiryType;
 class PageController extends Controller {
     public function indexAction()
     {
-        return $this->render('TaoBlogBundle:Page:index.html.twig');
+        $em = $this->getDoctrine()
+                    ->getManager();
+        $blogs = $em->getRepository('TaoBlogBundle:Blog')
+                    ->getLastestBlogs();
+        return $this->render('TaoBlogBundle:Page:index.html.twig', array(
+            'blogs'     => $blogs
+        ));
     }
     public function aboutAction()
     {
